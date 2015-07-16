@@ -15,10 +15,6 @@
 + (instancetype)createFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner;
 + (instancetype)createFooterView:(CGRect)frame;
 
-- (instancetype)initFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner withFrame:(CGRect)spinnerFrame;
-- (instancetype)initFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner;
-- (instancetype)initFooterView:(CGRect)frame;
-
 - (void)startFooterSpinnerAnimating;
 - (void)stopFooterSpinnerAnimating;
 

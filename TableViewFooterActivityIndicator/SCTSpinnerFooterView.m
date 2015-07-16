@@ -93,25 +93,5 @@
     
     return spinner;
 }
-/*
-- (void)initFooterSpinnerView
-{
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    CGFloat viewHeight = 100;
-    CGFloat spinnerTopSpacing = 5;
-    self.isBottomSpinnerAnimating = NO;
-    
-    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenSize.width, viewHeight)];
-    
-    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    spinner.hidesWhenStopped = YES;
-    spinner.frame = CGRectMake(screenSize.width*0.5f-20, spinnerTopSpacing, 20, 20);
-    
-    [footerView addSubview:spinner];
-    
-    self.tableView.tableFooterView = footerView;
-    self.bottomSpinner = spinner;
-}*/
-
 
 @end
