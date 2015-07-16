@@ -10,6 +10,7 @@
 
 @interface SCTSpinnerFooterView : UIView
 
++ (instancetype)createFooterSpinner;
 
 + (instancetype)createFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner withFrame:(CGRect)spinnerFrame;
 + (instancetype)createFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner;
@@ -18,6 +19,6 @@
 - (void)startFooterSpinnerAnimating;
 - (void)stopFooterSpinnerAnimating;
 
-@property (nonatomic, getter=isFooterSpinnerAnimating) BOOL footerSpinnerAnimating;
+- (BOOL)isAnimating;
 
 @end

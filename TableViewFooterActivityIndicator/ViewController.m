@@ -28,6 +28,7 @@
     
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     self.footerView = [SCTSpinnerFooterView createFooterView:CGRectMake(0, 0, screenSize.width, 100)];
+//    self.footerView = [SCTSpinnerFooterView createFooterSpinner];
     self.tableView.tableFooterView = self.footerView;
 }
 

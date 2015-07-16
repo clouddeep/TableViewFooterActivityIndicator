@@ -10,11 +10,20 @@
 @interface SCTSpinnerFooterView ()
 
 @property (nonatomic, strong) UIActivityIndicatorView *spinner;
+
 @end
 
 @implementation SCTSpinnerFooterView
 
 #pragma mark - Public methods
+
++ (instancetype)createFooterSpinner
+{
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    CGRect frame = CGRectMake(0, 0, screenSize.width, screenSize.height*0.15);
+    return [[super alloc] initFooterView:frame];
+}
+
 /**
  * Customize footer view frame, spinner and the frame of spinner.
  */
@@ -57,7 +66,7 @@
 {
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
 
-    self = [self initFooterView:frame activityIndicator:spinner withFrame:CGRectMake(screenSize.width*0.5f, 5, 20, 20)];
+    self = [self initFooterView:frame activityIndicator:spinner withFrame:CGRectMake(screenSize.width*0.5f-20, 5, 20, 20)];
     return self;
 }
 
@@ -74,13 +83,16 @@
 - (void)startFooterSpinnerAnimating
 {
     [_spinner startAnimating];
-    self.footerSpinnerAnimating = YES;
 }
 
 - (void)stopFooterSpinnerAnimating
 {
     [_spinner stopAnimating];
-    self.footerSpinnerAnimating = NO;
+}
+
+- (BOOL)isAnimating
+{
+    return self.spinner.isAnimating;
 }
 
 #pragma mark - Private
@@ -89,7 +101,7 @@
     CGSize screenSize = [UIScreen mainScreen].bounds.size;
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     spinner.hidesWhenStopped = YES;
-    spinner.frame = CGRectMake(screenSize.width*0.5f, 5, 20, 20);
+    spinner.frame = CGRectMake(screenSize.width*0.5f-20, 5, 20, 20);
     
     return spinner;
 }
