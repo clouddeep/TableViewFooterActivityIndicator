@@ -3,6 +3,10 @@ Spinner at footer view of table view.
 
 You can use **SCTSpinnerFooterView** to easily create a simple footer spinner when loading.
 
+## Features
+- Customized UIActivityIndicatorView and footer view's frame.
+- Simple use! Just call **createFooterSpinner** method to use the simple and plan UI interface.
+
 ## How to use
 
 Declare a property:
@@ -24,8 +28,4 @@ Then you can call methods for start/stop animating:
 You can get the animating state of UIActivityIndicatorView:
 
     - (BOOL)isAnimating;
-
-## Note
-- Customized UIActivityIndicatorView and footer view's frame.
-- Simple use! Just call **createFooterSpinner** method to use the simple and plan UI interface.
 
