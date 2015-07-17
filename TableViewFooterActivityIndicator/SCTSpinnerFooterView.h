@@ -10,10 +10,14 @@
 
 @interface SCTSpinnerFooterView : UIView
 
+
 + (instancetype)createFooterSpinner;
 
+
 + (instancetype)createFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner withFrame:(CGRect)spinnerFrame;
+
 + (instancetype)createFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner;
+
 + (instancetype)createFooterView:(CGRect)frame;
 
 - (void)startFooterSpinnerAnimating;

@@ -24,23 +24,17 @@
     return [[super alloc] initFooterView:frame];
 }
 
-/**
- * Customize footer view frame, spinner and the frame of spinner.
- */
+
 + (instancetype)createFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner withFrame:(CGRect)spinnerFrame
 {
     return [[super alloc] initFooterView:frame activityIndicator:spinner withFrame:spinnerFrame];
 }
-/**
- * Customize footer view frame and spinner. Spinner will be set at the center-top of footer view.
- */
+
 + (instancetype)createFooterView:(CGRect)frame activityIndicator:(UIActivityIndicatorView *)spinner
 {
     return [[super alloc] initFooterView:frame activityIndicator:spinner];
 }
-/**
- * Customize footer view frame. It will use default spinner and spinner will be set at the center-top of footer view.
- */
+
 + (instancetype)createFooterView:(CGRect)frame
 {
     return [[super alloc] initFooterView:frame];
